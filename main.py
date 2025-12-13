@@ -9,10 +9,10 @@ import asyncio
 import telebot
 from telebot import types
 
-api_id = 27691559
-api_hash = '8e7176c9f2bddf77efbfb831eb79a6af'
-phone = '998942584347'
-BOT_TOKEN = "7657134420:AAFcjvC2WV7uki70c8wYMqXBTDVzTpMgoaI"
+api_id = API_ID
+api_hash = API
+phone = 'phone number'
+BOT_TOKEN = TOKEN
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
