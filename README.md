@@ -1,77 +1,31 @@
-🤖 Telegram Group Parser Bot
+# 🤖 Telegram Group Parser Bot
 
-Telegram Group Parser Bot — инструмент для получения информации об участниках Telegram-групп с использованием Telethon (user-account) и управления через Telegram-бота.
+A Telegram bot for parsing members of Telegram groups using a user account via **Telethon**, with control through a Telegram bot interface.
 
-Бот предоставляет удобный интерфейс для выбора группы, после чего выполняет парсинг участников и сохраняет данные в файл.
+The bot allows you to select a group, parse its members, and save the collected data to a file.
 
-⚠️ Проект предназначен для учебных, исследовательских и административных целей.
+⚠️ This project is intended for educational and research purposes only.
 
-🧠 Архитектура проекта
+## 🧠 Architecture
+The project consists of two components:
+- **Telethon Client** — operates on behalf of a Telegram user account
+- **Telegram Bot (pyTelegramBotAPI)** — provides the control interface
 
-Проект состоит из двух частей:
+> Group member data is retrieved exclusively via Telethon.  
+> The Telegram Bot API is **not** used for parsing.
 
-Telethon client — работает от имени пользователя Telegram
+## 🚀 Features
+- List available megagroups
+- Parse members of a selected group
+- Collect user data:
+  - ID
+  - username
+  - full name
+  - group name
+  - phone number (if available)
+- Save data to a CSV file
+- Automatically send the file to the user via Telegram
 
-Telegram Bot (pyTelegramBotAPI) — интерфейс управления
+## 📄 Data Format
+Data is stored in `members.txt` (CSV format):
 
-📌 Именно Telethon позволяет получать список участников групп.
-📌 Бот не использует Telegram Bot API для парсинга.
-
-🚀 Возможности
-
-📋 Получение списка всех доступных мегагрупп аккаунта
-
-👥 Парсинг участников выбранной группы
-
-🧾 Сбор данных пользователей:
-
-ID
-
-username
-
-имя
-
-группа
-
-номер телефона (если доступен аккаунту)
-
-💾 Сохранение данных в файл
-
-📤 Автоматическая отправка файла пользователю через бота
-
-📄 Формат сохраняемых данных
-
-Файл members.txt (CSV-формат):
-
-id,username,name,group,phone
-123456789,user123,John Doe,Example Group,+123456789
-
-⚠️ ВАЖНО (честно и прямо)
-
-Бот НЕ использует Telegram Bot API для получения участников
-
-Все данные получаются через пользовательский аккаунт
-
-Номера телефонов доступны только если они не скрыты настройками приватности
-
-Использование Telethon нарушает правила Telegram, если применяется для:
-
-спама
-
-продажи баз данных
-
-скрытого сбора информации
-
-❗ Используй проект на свой риск и ответственность
-
-🛠 Используемые технологии
-
-Python 3.9+
-
-Telethon
-
-pyTelegramBotAPI (telebot)
-
-asyncio
-
-CSV
