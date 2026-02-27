@@ -1,31 +1,40 @@
 # 🤖 Telegram Group Parser Bot
 
-A Telegram bot for parsing members of Telegram groups using a user account via **Telethon**, with control through a Telegram bot interface.
+Telegram-бот для парсинга участников Telegram-групп с использованием пользовательского аккаунта через **Telethon** и управлением через интерфейс Telegram-бота.
 
-The bot allows you to select a group, parse its members, and save the collected data to a file.
+Бот позволяет выбирать группу, парсить её участников и сохранять собранные данные в файл.
 
-⚠️ This project is intended for educational and research purposes only.
+⚠️ Данный проект предназначен **только для образовательных и исследовательских целей**.
 
-## 🧠 Architecture
-The project consists of two components:
-- **Telethon Client** — operates on behalf of a Telegram user account
-- **Telegram Bot (pyTelegramBotAPI)** — provides the control interface
+---
 
-> Group member data is retrieved exclusively via Telethon.  
-> The Telegram Bot API is **not** used for parsing.
+## 🧠 Архитектура
 
-## 🚀 Features
-- List available megagroups
-- Parse members of a selected group
-- Collect user data:
-  - ID
-  - username
-  - full name
-  - group name
-  - phone number (if available)
-- Save data to a CSV file
-- Automatically send the file to the user via Telegram
+Проект состоит из двух компонентов:
 
-## 📄 Data Format
-Data is stored in `members.txt` (CSV format):
+- **Telethon Client** — работает от имени пользовательского аккаунта Telegram
+- **Telegram Bot (pyTelegramBotAPI)** — предоставляет интерфейс управления
 
+> Данные об участниках группы извлекаются исключительно через Telethon.  
+> **Telegram Bot API НЕ используется** для парсинга.
+
+---
+
+## 🚀 Возможности
+
+- 📋 Просмотр доступных мегагрупп
+- 👥 Парсинг участников выбранной группы
+- 📊 Сбор данных о пользователях:
+  - 🆔 ID
+  - 📛 username
+  - 👤 полное имя
+  - 📁 название группы
+  - 📞 номер телефона (если доступен)
+- 💾 Сохранение данных в CSV-файл
+- 📤 Автоматическая отправка файла пользователю через Telegram
+
+---
+
+## 📄 Формат данных
+
+Данные сохраняются в файл `members.txt` в формате CSV:
